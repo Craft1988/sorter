@@ -1,12 +1,12 @@
 package org.mike.project.utils;
 
-import org.mike.project.interfaces.SortableCustomClass;
+import org.mike.project.interfaces.ISortableCustomClass;
 
 import java.util.Comparator;
 import java.util.List;
 
 public class Handler {
-    public static <T extends SortableCustomClass> void insertionSort(List<T> unsorted, Comparator<T> c) {
+    public static <T extends ISortableCustomClass> void insertionSort(List<T> unsorted, Comparator<T> c) {
         if (unsorted.size() < 2) {
             return;
         }
@@ -27,7 +27,7 @@ public class Handler {
     }
 
 
-    public static<T extends SortableCustomClass> int binarySearch(List<T> sorted, Comparator<T> c) {
+    public static<T extends ISortableCustomClass> int binarySearch(List<T> sorted, Comparator<T> c) {
 
         return -1;
     }

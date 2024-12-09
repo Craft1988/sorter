@@ -1,6 +1,6 @@
 package org.mike.project.driver;
 
-import org.mike.project.interfaces.SortableCustomClass;
+import org.mike.project.interfaces.ISortableCustomClass;
 import org.mike.project.utils.Creator;
 import org.mike.project.utils.Handler;
 
@@ -11,7 +11,7 @@ import java.util.Scanner;
 import static org.mike.project.utils.Console.*;
 
 public class ApplicationDriver {
-    private static List<SortableCustomClass> list;
+    private static List<ISortableCustomClass> list;
     private final static Scanner sc = new Scanner(System.in);
     private static int choose;
     private static boolean isSorted;

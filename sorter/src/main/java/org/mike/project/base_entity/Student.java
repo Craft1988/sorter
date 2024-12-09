@@ -1,10 +1,10 @@
 package org.mike.project.base_entity;
 
-import org.mike.project.interfaces.SortableCustomClass;
+import org.mike.project.interfaces.ISortableCustomClass;
 
 import java.util.Comparator;
 
-public class Student implements SortableCustomClass {
+public class Student implements ISortableCustomClass {
     private final int id;
     private final String lastName;
     private final String firstName;

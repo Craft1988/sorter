@@ -1,10 +1,11 @@
 package org.mike.project.base_entity;
 
-import org.mike.project.interfaces.SortableCustomClass;
+import org.mike.project.interfaces.IAutobuilder;
+import org.mike.project.interfaces.ISortableCustomClass;
 
 import java.util.Comparator;
 
-public class Person implements SortableCustomClass {
+public class Person implements ISortableCustomClass {
     private final String firstName;
     private final String lastName;
     private final int age;
@@ -15,7 +16,7 @@ public class Person implements SortableCustomClass {
         this.age = builder.age;
     }
 
-    public static class PersonBuilder {
+    public static class PersonBuilder implements IAutobuilder {
         private String firstName;
         private String lastName;
         private int age;
@@ -37,6 +38,16 @@ public class Person implements SortableCustomClass {
 
         public Person build() {
             return new Person(this);
+        }
+
+        @Override
+        public PersonBuilder randomAutoSet() {
+            return null;
+        }
+
+        @Override
+        public PersonBuilder fromFileAutoSet() {
+            return null;
         }
     }
 

@@ -1,10 +1,11 @@
 package org.mike.project.base_entity;
 
-import org.mike.project.interfaces.SortableCustomClass;
+import org.mike.project.interfaces.IAutobuilder;
+import org.mike.project.interfaces.ISortableCustomClass;
 
 import java.util.Comparator;
 
-public class Animal implements SortableCustomClass {
+public class Animal implements ISortableCustomClass {
     private final String type;
     private final Boolean isWool;
     private final String eyeColor;
@@ -15,7 +16,7 @@ public class Animal implements SortableCustomClass {
         this.eyeColor = builder.eyeColor;
     }
 
-    public static class AnimalBuilder {
+    public static class AnimalBuilder implements IAutobuilder {
         private String type;
         private Boolean isWool;
         private String eyeColor;
@@ -37,6 +38,18 @@ public class Animal implements SortableCustomClass {
 
         public Animal build() {
             return new Animal(this);
+        }
+
+        @Override
+        public AnimalBuilder randomAutoSet() {
+            //TODO random fill
+            return null;
+        }
+
+        @Override
+        public AnimalBuilder fromFileAutoSet() {
+            //TODO fill from file
+            return null;
         }
     }
 
