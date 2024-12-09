@@ -19,9 +19,24 @@ public class Animal implements SortableCustomClass {
         private String type;
         private Boolean isWool;
         private String eyeColor;
+
         public AnimalBuilder setType(String type) {
             this.type = type;
             return this;
+        }
+
+        public AnimalBuilder setWool(boolean isWool) {
+            this.isWool = isWool;
+            return this;
+        }
+
+        public AnimalBuilder setEyeColor(String eyeColor) {
+            this.eyeColor = eyeColor;
+            return this;
+        }
+
+        public Animal build() {
+            return new Animal(this);
         }
     }
 
@@ -35,11 +50,8 @@ public class Animal implements SortableCustomClass {
 
     @Override
     public String toString() {
-        return "Animal{" +
-                "type='" + type + '\'' +
-                ", isWool=" + isWool +
-                ", eyeColor='" + eyeColor + '\'' +
-                '}';
+        return
+                type + " with " + eyeColor + " eyes, and" + (isWool ? " with wool" : " without wool");
     }
 
     @Override
