@@ -1,5 +1,6 @@
 package org.mike.project.utils;
 
+import org.mike.project.base_entity.Person;
 import org.mike.project.interfaces.ISortableCustomClass;
 
 import java.util.ArrayList;

@@ -1,9 +1,11 @@
 package org.mike.project.base_entity;
 
+import org.mike.project.data.PersonData;
 import org.mike.project.interfaces.IAutobuilder;
 import org.mike.project.interfaces.ISortableCustomClass;
 
 import java.util.Comparator;
+import java.util.Random;
 
 public class Person implements ISortableCustomClass {
     private final String firstName;
@@ -42,7 +44,16 @@ public class Person implements ISortableCustomClass {
 
         @Override
         public PersonBuilder randomAutoSet() {
-            return null;
+            if ((int) (Math.random() * 100) > 50) {
+                this.lastName = PersonData.FEMALE_LAST_NAMES.getRandomValue();
+                this.firstName = PersonData.FEMALE_FIRST_NAMES.getRandomValue();
+            } else {
+                this.lastName = PersonData.MALE_LAST_NAMES.getRandomValue();
+                this.firstName = PersonData.MALE_FIRST_NAMES.getRandomValue();
+            }
+            this.age = new Random().nextInt(50);
+
+            return this;
         }
 
         @Override

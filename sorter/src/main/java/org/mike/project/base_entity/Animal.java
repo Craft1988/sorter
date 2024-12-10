@@ -1,5 +1,6 @@
 package org.mike.project.base_entity;
 
+import org.mike.project.data.AnimalData;
 import org.mike.project.interfaces.IAutobuilder;
 import org.mike.project.interfaces.ISortableCustomClass;
 
@@ -36,20 +37,23 @@ public class Animal implements ISortableCustomClass {
             return this;
         }
 
-        public Animal build() {
-            return new Animal(this);
-        }
 
         @Override
         public AnimalBuilder randomAutoSet() {
-            //TODO: add a random fill implementation
-            return null;
+            this.type = AnimalData.TYPES.getRandomValue();
+            this.eyeColor = AnimalData.EYE_COLORS.getRandomValue();
+            this.isWool = (int) (Math.random() * 100) > 50;
+            return this;
         }
 
         @Override
         public AnimalBuilder fromFileAutoSet() {
             //TODO: add a fill from file implementation
             return null;
+        }
+
+        public Animal build() {
+            return new Animal(this);
         }
     }
 
