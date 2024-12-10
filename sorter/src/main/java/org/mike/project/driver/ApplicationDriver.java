@@ -24,7 +24,7 @@ public class ApplicationDriver {
 
             case 2 -> {
                 if (list == null || list.isEmpty()) {
-                    System.out.println("List is empty.");
+                    System.out.println("====--->>List is empty. Please, fill the list<<---====");
                     showStartMenu();
                 }
                 list.forEach(System.out::println);
@@ -38,7 +38,7 @@ public class ApplicationDriver {
             }
             case 4 -> {
                 if (!isSorted) {
-                    System.out.println("Collection has not sorted");
+                    System.out.println("====--->>Collection has not sorted<<---====");
                     start();
                 }
                 Comparator c = list.get(0).getCustomComparator();
@@ -50,7 +50,7 @@ public class ApplicationDriver {
             case 0 -> System.exit(0);
 
             default -> {
-                System.out.println("No such option!");
+                System.out.println("====--->>No such option!<<---====");
                 start();
             }
         }

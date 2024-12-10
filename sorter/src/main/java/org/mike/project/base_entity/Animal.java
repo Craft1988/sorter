@@ -42,13 +42,13 @@ public class Animal implements ISortableCustomClass {
 
         @Override
         public AnimalBuilder randomAutoSet() {
-            //TODO random fill
+            //TODO: add a random fill implementation
             return null;
         }
 
         @Override
         public AnimalBuilder fromFileAutoSet() {
-            //TODO fill from file
+            //TODO: add a fill from file implementation
             return null;
         }
     }

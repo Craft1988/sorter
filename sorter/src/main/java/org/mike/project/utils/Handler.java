@@ -28,7 +28,7 @@ public class Handler {
 
 
     public static<T extends ISortableCustomClass> int binarySearch(List<T> sorted, Comparator<T> c) {
-
+        // TODO: Add a binary search implementation
         return -1;
     }
 }

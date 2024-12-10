@@ -10,13 +10,13 @@ public class Creator {
         List<ISortableCustomClass> p = new ArrayList<>();
         switch (choose) {
             case 1 -> {
-                //TODO list of Persons.
+                //TODO: add returning a list of Persons.
             }
             case 2 -> {
-                //TODO list of Animals.
+                //TODO: add returning a list of Animals.
             }
             case 3 -> {
-                //TODO list of Students.
+                //TODO add returning a list of Students.
             }
         }
         return p;
